@@ -9,28 +9,35 @@
     <style>
        
     </style>
-    <body class="" style="text-align: center;">
-        <h1  >Sentiment analysis</h1>
+    <body class="text-white" style="text-align: center;background-image:url('../static/img/bg.jpg');background-size: cover;background-repeat: no-repeat;
+  background-attachment: fixed;">
+        <div class="row" >
+  <div class="col-6"></div>
+        <div class="col-6" style="margin-top: 12%;margin-bottom:auto"> 
+        <div  style="border: 3px solid green;padding: 10px;" >
+        <h1  >SENTIMENT ANALYSIS</h1>
         <form action="{{url_for('home')}}" method="POST">
             <div class="form-group">
                 <h3><label for="exampleInput">Enter the sentence : </label></h3>
-                <input name="sentence" style="margin: auto;" type="text" class="form-control col-md-4" placeholder="Enter sentiment">
+                <input name="sentence" style="margin: auto;" type="text" class="form-control col-md-5" placeholder="Enter sentiment">
             </div>
-            <button type="submit" class="btn btn-outline-success" style="margin-bottom: 20px;">Check</button>
+            <button type="submit" class="btn btn-outline-success">Check</button>
         </form>
 
 
         {% if flag == 1 %}
-            <h3>sentence : {{senti}}</h3>
-            <img src="/static/img/positive.jpg" width="212px" height="407px">
+            <h3>Sentence : {{senti}}</h3>
+            <h3 >Result: <span class="text-success">Positive</span></h3>
+            <!--<img src="/static/img/positive1.jpg" >-->
         {% elif flag == 0 %}
-            <h3>sentence : {{senti}}</h3>
-            <img src="/static/img/negative.jpg" width="212px" height="407px">
+            <h3>Sentence : {{senti}}</h3>
+            <h3>Result: <span class="text-danger">Negative</span></h3>
+            <!--<img src="/static/img/negative1.jpg" >-->
         {% endif %}
-
+        </div>
+        </div>
+        </div>
         
-        
-       
     </body>
 </html>
 
