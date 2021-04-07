@@ -24,8 +24,9 @@
             <button type="submit" class="btn btn-outline-success">Check</button>
         </form>
 
-
-        {% if flag == 1 %}
+        {% if senti == ""  %}
+            <h3>Result: <span class="text-danger">Enter the sentence</span></h3>
+        {% elif flag == 1 %}
             <h3>Sentence : {{senti}}</h3>
             <h3 >Result: <span class="text-success">Positive</span></h3>
             <!--<img src="/static/img/positive1.jpg" >-->
